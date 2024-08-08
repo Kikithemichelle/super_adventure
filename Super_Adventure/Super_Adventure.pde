@@ -25,12 +25,16 @@ Declare  an int named score, a boolean named isGameOver and 2 floats named view_
 
 
 /* -------------------------- */
-
+int score;
+boolean isGameOver;
+float view_x;
+float view_y;
 /* Section 2 part 2: Declare 2 string variables to be used later. 
 
 Declare a string named coinPhrase and livePhrase
 */
-
+String coinPhrase;
+String livePhrase;
 
 /*-----------------------*/
 Player player;
@@ -51,7 +55,7 @@ void setup() {
   
   Call the constructor Player(p,SPRITE_SCALE) with those parameters. It should be set equal to the player variable
   */
- 
+ player=new Player(p,SPRITE_SCALE);
  
  
   /*----------------------*/
@@ -179,16 +183,16 @@ void keyPressed() {
   Fill in the If statements, one is done for you and the remaining are the other directions. They only require
   the directions in order: RIGHT, LEFT, UP, & DOWN
   */
-  if() {
+  if(keyCode== RIGHT) {
      player.change_x = MOVE_SPEED; 
   }
-   else if() {
+   else if(keyCode== LEFT) {
      player.change_x = -MOVE_SPEED; 
   }
    else if(keyCode == UP && isOnPlatforms(player,platforms)) {
      player.change_y = -JUMP_SPEED; 
   }
-   else if() {
+   else if(keyCode == DOWN) {
      player.change_y = MOVE_SPEED; 
   }
   else if(isGameOver && key == ' ') {
@@ -202,13 +206,13 @@ void keyReleased() {
   /* Section 3: If statements will complete the key released function
     Fill these in same as above the order is: RIGHT, LEFT, DOWN
   */
-    if() {
+    if(keyCode == RIGHT) {
      player.change_x = 0; 
   }
-   else if() {
+   else if(keyCode == LEFT) {
      player.change_x = 0; 
   }
-   else if() {
+   else if(keyCode == DOWN) {
      player.change_y = 0; 
   }
   /*----------------------------*/
