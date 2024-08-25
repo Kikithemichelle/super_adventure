@@ -231,10 +231,10 @@ void createPlatforms(String filename) {
   */
   String[] lines = loadStrings(filename);
   /* First for loop */
-  for() {
+  for(int row = 0;row < lines.length;row ++) {
     String[] values = split(lines[row],",");
     /* Second for loop */
-    for() {
+    for(int col =0;col< values.length;col ++) {
       if(values[col].equals("m")) {
          Sprite s = new Sprite(marble_block,SPRITE_SCALE);
          s.center_x = SPRITE_SIZE/2 + col * SPRITE_SIZE;
